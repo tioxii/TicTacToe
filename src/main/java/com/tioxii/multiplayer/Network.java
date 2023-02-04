@@ -21,6 +21,7 @@ public class Network {
         public void onOpen(Session session) throws IOException {
             this.session = session;
             connections.add(this);
+            System.out.println("New connection: " + session.getId());
         }
 
         @OnMessage
