@@ -14,7 +14,6 @@ public class ChessBoard implements Serializable {
         private ChessPiece piece;
     }
 
-
     //TODO fill with chess pieces
     public ChessBoard() {
         

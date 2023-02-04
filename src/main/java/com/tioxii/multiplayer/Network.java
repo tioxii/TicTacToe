@@ -13,7 +13,7 @@ import javax.websocket.server.ServerEndpoint;
 public class Network {    
     ArrayList<Connection> connections = new ArrayList<>();;
 
-    @ServerEndpoint("/chess")
+    @ServerEndpoint(value = "/chess")
     public class Connection {
         private Session session = null;
         
@@ -24,8 +24,7 @@ public class Network {
         }
 
         @OnMessage
-        public void onMessage(Session session, String message) throws IOException {
-
+        public void onMessage(Session session, Message message) throws IOException {
         }
 
         @OnClose
