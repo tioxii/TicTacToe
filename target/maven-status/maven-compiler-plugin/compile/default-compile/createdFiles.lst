@@ -1,0 +1,9 @@
+com\tioxii\chess\pieces\Color.class
+com\tioxii\chess\pieces\Pawn.class
+com\tioxii\chess\pieces\Tower.class
+com\tioxii\multiplayer\Network.class
+com\tioxii\App.class
+com\tioxii\chess\pieces\ChessPiece.class
+com\tioxii\multiplayer\Connection.class
+com\tioxii\chess\pieces\Piece.class
+com\tioxii\chess\ChessBoard.class
