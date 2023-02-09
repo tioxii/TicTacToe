@@ -1,0 +1,31 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+
+.tbl {
+    color: #fff;
+    border: 2px solid #f60000;
+    border-collapse: collapse;
+    align-self: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+.header {
+    font-weight: bold;
+    text-align: center;
+}

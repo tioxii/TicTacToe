@@ -1,0 +1,97 @@
+body {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #101010;
+}
+
+.tictactoe {
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    border: #fff 2px solid;
+    border-radius: 10px;
+    padding: 100px;
+    margin: 10px;
+}
+
+.header {
+    font-weight: bold;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+}
+
+.board {
+    text-align: center;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.row {
+    padding: 0px;
+    text-align: center;
+}
+
+/* Square buttons */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    font-size:50px;
+    border-radius: 0px;
+    margin: 2px;
+    border: none;
+    border-collapse: collapse;
+}
+
+.cell:after {
+    padding: 0px;
+    margin: 0px;
+    transform: scale(1.5);
+}
+
+#reset {
+    background-color: #000000;
+    color: #ff0000;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.status {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+#status {
+    color: #ffffff;
+}
+
+
+
