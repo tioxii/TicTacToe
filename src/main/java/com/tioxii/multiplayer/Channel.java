@@ -12,10 +12,8 @@ import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
-import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 
-import com.tioxii.tictactoe.Event;
 import com.tioxii.tictactoe.PlayerController;
 import com.tioxii.tictactoe.TicTacToeGame;
 
@@ -36,12 +34,13 @@ public class Channel {
         PlayerController playerController = new PlayerController(this, game);
         players.put(session, playerController);
         game.joinGame(playerController);
+        System.out.println("New connection");
     }
 
     @OnMessage
     public void onMessage(Session session, Message message) throws IOException {
         PlayerController playerController = players.get(session);
-        playerController.takeTurn(message.getData());
+        playerController.takeTurn(message.getTurn());
     }
 
     @OnClose
@@ -51,6 +50,7 @@ public class Channel {
         game.leaveGame(playerController);
         players.remove(session);
 
+        System.out.println("Connection closed");
     }
 
     @OnError

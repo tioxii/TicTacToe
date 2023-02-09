@@ -2,10 +2,19 @@
 var ws;
 
 function connect() {
+    if(ws != null) {
+        ws.close();
+        document.getElementById('connect').innerHTML = 'Connect';
+    }
+
     var hostname = document.location.host;
     var pathname = document.location.pathname;
 
-    ws = new WebSocket("ws://" + hostname + pathname + "chat");
+    ws = new WebSocket("ws://" + hostname + pathname + "game");
+    if(ws == null) {
+        document.getElementById('connect').innerHTML = 'Disconnect';
+    }
+    
 
     ws.onmessage = function (event) {
         var data = JSON.parse(event.data);
@@ -16,6 +25,11 @@ function connect() {
         }
         render();
     };
+
+    ws.onclose = function (event) {
+        board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+        render();
+    }
 }
 
 function send(index) {

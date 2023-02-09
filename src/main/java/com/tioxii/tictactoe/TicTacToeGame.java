@@ -17,6 +17,9 @@ public class TicTacToeGame {
     }
 
     public boolean takeTurn(int position, PlayerController playerController) {
+        if(position < 0 || position > 8)
+            return false;
+        
         if (playerX != playerController && turn == "X")
             return false;
         if (playerO != playerController && turn == "O")
@@ -26,6 +29,7 @@ public class TicTacToeGame {
         
         board[position] = turn;
         turn = turn == "X" ? "O" : "X";
+        sendBoard();
         return true;
     }
 

@@ -67,7 +67,7 @@ body {
     transform: scale(1.5);
 }
 
-#reset {
+.btn {
     background-color: #000000;
     color: #ff0000;
     border: 2px solid #ffffff;

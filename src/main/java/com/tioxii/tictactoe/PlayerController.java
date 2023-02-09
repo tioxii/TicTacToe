@@ -15,7 +15,7 @@ public class PlayerController {
     }
 
     @Event("turn")
-    public void takeTurn(String data) {
-        game.takeTurn(Integer.parseInt(data), this);
+    public void takeTurn(String turn) {
+        game.takeTurn(Integer.parseInt(turn), this);
     }
 }
