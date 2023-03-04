@@ -1,2 +1,3 @@
-# Chess
-This is small chess project :)
+# TicTacToe with WebSockets
+This is a small project to get into websockets.
+For this I implemented a TicTacToe game that can be play over the browser using Java as backend.
